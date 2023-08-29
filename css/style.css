@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: aliceblue;
+    z-index: -1;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 250px;
+    background-color: hsl(225, 100%, 98%);
+    z-index: -1;
+}
+
+.container {
+    margin: 30px 100px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.info h1 {
+    margin-bottom: 10px;
+}
+.info h1.dark {
+    color: white;
+}
+.info p {
+    color: hsl(228, 28%, 20%);
+    font-weight: bold;
+}
+.mode {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mode .switch-mode {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    margin-left: 10px;
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    background-image: linear-gradient(45deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.mode p {
+    color: hsl(228, 12%, 44%);
+    font-weight: bold;
+}
+
+.switch-mode .circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.3s;
+}
+.switch-mode .circle.clicked {
+transform: translateX(25px);
+background-color: #363755;
+}
+.top-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.top-sec .col {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    padding: 20px;
+    background-color: hsl(227, 47%, 96%);
+    border-radius: 5px;
+}
+
+.col .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.col h2 {
+    font-size: 3rem;
+}
+
+.col .follow {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 44%);
+    margin-bottom: 20px;
+}
+
+ .up {
+    position: relative;
+    margin-bottom: 20px;
+    color: hsl(163, 72%, 41%);
+    font-weight: bold;
+}
+
+ .up::before {
+    content: url(../images/icon-up.svg);
+    position: absolute;
+    top: -2px;
+    left: -15px;
+    width: 40px;
+    height: 40px;
+}
+
+ .down {
+    position: relative;
+    color: hsl(356, 69%, 56%);
+}
+ .down::before {
+    content: url(../images/icon-down.svg);
+    position: absolute;
+    left: -15px;
+    top: -2px;
+    width: 40px;
+    height: 40px;
+}
+
+.col .box img {
+    margin-right: 10px;
+}
+
+.twiter::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: hsl(203, 89%, 53%);
+}
+
+.face::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: hsl(208, 92%, 53%);
+}
+
+.insta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+.youtube::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: hsl(348, 97%, 39%);
+}
+
+.col .box span {
+    color: hsl(228, 12%, 44%);
+    font-weight: bold;
+}
+.top-sec .col:hover {
+    background-color: hsla(230, 6%, 81%, 0.5);
+    cursor: pointer;
+}
+
+@media (max-width:400px) {
+    header {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    header .info::after {
+        content: "";
+        position: absolute;
+        border: 2px solid hsl(228, 12%, 44%);
+        width: calc(100% - 20px);
+        margin: 0 auto;
+    }
+
+    .info p {
+        margin-bottom: 20px;
+    }
+
+    header .info {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .info h1 {
+        font-size: 1.5rem;
+    }
+
+    header .mode {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .container {
+        margin: 10px;
+    }
+
+    .top-sec {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-sec .col {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+/*
+end of top section
+*/
+.title {
+    margin: 30px 0;
+    font-size: 1.5rem;
+    color:hsl(228, 12%, 44%) ;
+}
+.last-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.last-sec .box {
+    width: calc(25% - 20px);
+    padding: 30px;
+    background-color: hsl(227, 47%, 96%);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.last-sec .box:hover {
+    background-color: hsla(230, 6%, 81%, 0.5);
+    cursor: pointer;
+}
+.last-sec .box .row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.last-sec .box .row1 p{
+    font-weight: bold;
+    color:#363755;
+}
+.last-sec .box .row1 p.dark {
+color: #95a1cb;
+}
+.last-sec .box .row2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.box .row2 :first-child {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.box .row2 .up {
+    margin-bottom: 0;
+}
+@media (max-width:400px){
+    .last-sec {
+        flex-direction: column;
+    }
+    .last-sec .box {
+        width: 100%;
+    }
+}
+.top-sec .col.dark {
+    background-color: #252b43;
+}
+.top-sec .col.dark:hover ,.last-sec .box.box.dark:hover {
+    background-color:#363755 ;
+    cursor: pointer;
+}
+main.dark::before{
+    background-color: #20222f;
+}
+.col.dark {
+    background-color: hsl(228, 28%, 20%);
+}
+.last-sec .box.dark {
+    background-color: hsl(228, 28%, 20%);
+}
+.last-sec .row2.dark {
+    color: white;
+}
+h2.dark {
+    color: white;
+}
+h3.dark {
+    color: white;
+}
+.info p.dark,.mode p.dark {
+    color: #95a1cb;
+}
