@@ -11,7 +11,9 @@ let top_p=document.querySelectorAll(".info p");
 
 
 
-
+window.onload=function(){
+    darkmode();
+}
 function darkmode(){
     btn.classList.add("clicked");
 for(let i=0;i<h.length;i++){
